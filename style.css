@@ -1,0 +1,155 @@
+body {
+    font-family: 'Concert One', cursive;
+    background-color: #f0f8ff;
+    color: #333;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+.container {
+    max-width: 1200px;
+    width: 100%;
+}
+h1, h2, h3, h4 {
+    color: #6A0DAD;
+}
+table {
+    width: 100%;
+    margin: 0 auto 20px auto;
+    border-collapse: collapse;
+}
+th, td {
+    padding: 10px;
+    text-align: center;
+    border: 1px solid #ccc;
+}
+.tab {
+    overflow: hidden;
+    border-bottom: 2px solid #6A0DAD;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+}
+.tab button {
+    background-color: #FFD700;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding: 14px 16px;
+    transition: 0.3s;
+    font-size: 17px;
+    font-family: 'Concert One', cursive;
+}
+.tab button:hover {
+    background-color: #FF69B4;
+}
+.tab button.active {
+    background-color: #32CD32;
+}
+.tabcontent {
+    display: none;
+    padding: 20px 0;
+}
+label {
+    display: block;
+    margin: 5px 0;
+}
+select#year {
+    background-color: #FFD700;
+    border: 2px solid #6A0DAD;
+    border-radius: 8px;
+    font-family: 'Concert One', cursive;
+    font-size: 16px;
+    padding: 8px 12px;
+    margin-left: 10px;
+    transition: background-color 0.3s, transform 0.2s;
+    cursor: pointer;
+}
+select#year:hover {
+    background-color: #FF69B4;
+}
+.locations-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+    text-align: left;
+}
+.location-block {
+    background: #fff;
+    border: 1px solid #ccc;
+    padding: 10px;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.location-block h3 {
+    margin-top: 0;
+    font-size: 1.2em;
+    color: #FF69B4;
+}
+.left-time-col {
+    white-space: nowrap;
+    overflow: hidden;
+}
+button[type='submit'], button#printButton, button#pdfButton, a#startOver, button[type='button'] {
+    background-color: #6A0DAD;
+    color: white;
+    font-family: 'Concert One', cursive;
+    font-size: 20px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    margin: 10px;
+    text-decoration: none;
+}
+button:hover, a#startOver:hover {
+    background-color: #FF69B4;
+    transform: scale(1.05);
+}
+.plannerType {
+    margin-top:40px;
+    text-decoration: underline;
+    font-weight: bold;
+}
+@media print {
+    #printButton, #pdfButton, #startOver {
+        display: none;
+    }
+    body {
+        background: none !important;          /* remove colour / image */
+        -webkit-print-color-adjust: exact;    /* still let text keep its colour if you use any */
+        print-color-adjust: exact;
+    }
+    /* don’t waste vertical space with the on-screen h3 */
+    h2.day-heading-screen {
+        display: none;
+    }
+    /* style the repeated day header row if you like */
+    .day-heading-print th {
+        text-align: center;
+        font-size: 20px;
+        padding: 4px 0;
+        font-weight: bold;
+        color: #6A0DAD;
+        text-decoration: underline;
+    }
+    .print-instructions {
+        display: none;
+    }
+}
+@media screen {
+    /* keep the original h3 for on-screen use only */
+    .day-heading-print {
+        display: none;
+    }     /* don’t show extra header row on screen */
+    .day-heading-screen {
+        font-weight: bold;
+        text-decoration: underline;
+    }
+}
