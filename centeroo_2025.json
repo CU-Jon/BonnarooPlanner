@@ -1,0 +1,820 @@
+{
+  "Thursday": {
+    "What Stage": [
+      {
+        "name": "Wilderado",
+        "start": "5:45 PM",
+        "end": "6:30 PM"
+      },
+      {
+        "name": "Marcus King",
+        "start": "7:15 PM",
+        "end": "8:15 PM"
+      },
+      {
+        "name": "Luke Combs",
+        "start": "9:00 PM",
+        "end": "10:45 PM"
+      }
+    ],
+    "Which Stage": [],
+    "The Other": [
+      {
+        "name": "Azzecca",
+        "start": "5:15 PM",
+        "end": "6:15 PM"
+      },
+      {
+        "name": "Max Styler",
+        "start": "6:30 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "name": "Green Velvet",
+        "start": "7:45 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "name": "Sammy Virji",
+        "start": "9:00 PM",
+        "end": "10:00 PM"
+      },
+      {
+        "name": "Dom Dolla",
+        "start": "11:00 PM",
+        "end": "1:00 AM"
+      }
+    ],
+    "Infinity Stage": [
+      {
+        "name": "DJ Python",
+        "start": "3:15 PM",
+        "end": "4:15 PM"
+      },
+      {
+        "name": "Tinzo + JoJo",
+        "start": "5:30 PM",
+        "end": "6:30 PM"
+      },
+      {
+        "name": "Parisi",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "name": "Of the Trees B2B Tape B",
+        "start": "8:30 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "name": "Rebecca Black",
+        "start": "10:00 PM",
+        "end": "11:00 PM"
+      },
+      {
+        "name": "TractorBeam",
+        "start": "1:00 AM",
+        "end": "2:00 AM"
+      }
+    ],
+    "This Tent": [
+      {
+        "name": "Die Spitz",
+        "start": "3:00 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "Kitchen Dwellers",
+        "start": "4:15 PM",
+        "end": "5:15 PM"
+      },
+      {
+        "name": "The Lemon Twigs",
+        "start": "6:00 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "name": "Dogs in a Pile",
+        "start": "7:45 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "name": "Daniel Donato's Cosmic Country",
+        "start": "10:45 PM",
+        "end": "11:45 PM"
+      },
+      {
+        "name": "Insane Clown Posse",
+        "start": "12:30 AM",
+        "end": "1:30 AM"
+      }
+    ],
+    "That Tent": [
+      {
+        "name": "The Droptines",
+        "start": "3:15 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Sofia Isella",
+        "start": "4:45 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "name": "Hey, Nothing",
+        "start": "6:15 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "name": "WISP",
+        "start": "7:45 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "name": "2Hollis",
+        "start": "10:30 PM",
+        "end": "11:30 PM"
+      },
+      {
+        "name": "Joey Valence & Brae",
+        "start": "12:15 AM",
+        "end": "1:15 AM"
+      }
+    ],
+    "Snake & Jake's Christmas Club Barn": [
+      {
+        "name": "Wedding Singer Karaoke w/ House of Yes",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Astrology & Tarot w/ Wild Waves",
+        "start": "12:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Sit Down if You're Single w/ Nectar",
+        "start": "3:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Unknowhat - Hell Yeah w/ Rusty Lazer",
+        "start": "1:30 AM",
+        "end": "5:00 AM"
+      }
+    ]
+  },
+  "Friday": {
+    "What Stage": [
+      {
+        "name": "Aly & AJ",
+        "start": "3:00 PM",
+        "end": "3:34 PM"
+      },
+      {
+        "name": "Flipturn",
+        "start": "4:45 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "Foster the People",
+        "start": "6:45 PM",
+        "end": "7:45 PM"
+      },
+      {
+        "name": "John Summit",
+        "start": "8:45 PM",
+        "end": "10:00 PM"
+      },
+      {
+        "name": "Tyler, The Creator",
+        "start": "11:00 PM",
+        "end": "12:15 AM"
+      }
+    ],
+    "Which Stage": [
+      {
+        "name": "Rachel Chinouriri",
+        "start": "2:30 PM",
+        "end": "3:15 PM"
+      },
+      {
+        "name": "Slightly Stoopid",
+        "start": "4:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Wallows",
+        "start": "5:45 PM",
+        "end": "6:45 PM"
+      },
+      {
+        "name": "The Red Clay Strays",
+        "start": "7:30 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "name": "Goose",
+        "start": "9:30 PM",
+        "end": "11:00 PM"
+      },
+      {
+        "name": "Glass Animals",
+        "start": "12:30 AM",
+        "end": "1:45 AM"
+      }
+    ],
+    "The Other": [
+      {
+        "name": "Effin",
+        "start": "4:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Eater",
+        "start": "5:15 PM",
+        "end": "6:15 PM"
+      },
+      {
+        "name": "Detox Unit",
+        "start": "6:30 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "name": "Levity",
+        "start": "7:45 PM",
+        "end": "8:45 PM"
+      },
+      {
+        "name": "INZO",
+        "start": "9:00 PM",
+        "end": "10:00 PM"
+      },
+      {
+        "name": "Tape B",
+        "start": "10:15 PM",
+        "end": "11:15 PM"
+      },
+      {
+        "name": "Of The Trees",
+        "start": "12:00 AM",
+        "end": "1:00 AM"
+      },
+      {
+        "name": "Tipper",
+        "start": "1:30 AM",
+        "end": "2:30 AM"
+      }
+    ],
+    "Infinity Stage": [
+      {
+        "name": "Airrica",
+        "start": "1:45 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "name": "Kamino",
+        "start": "3:15 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Omnom",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "Ayybo",
+        "start": "6:45 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "name": "ITSMURPH",
+        "start": "11:00 PM",
+        "end": "12:30 AM"
+      },
+      {
+        "name": "John Summit",
+        "start": "1:45 AM",
+        "end": "3:00 AM"
+      }
+    ],
+    "This Tent": [
+      {
+        "name": "Bebe Stockwell",
+        "start": "1:00 PM",
+        "end": "1:45 PM"
+      },
+      {
+        "name": "Matt Champion",
+        "start": "2:15 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Cults",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "MJ Lenderman",
+        "start": "5:15 PM",
+        "end": "6:15 PM"
+      },
+      {
+        "name": "King Gizzard & The Lizard Wizard",
+        "start": "7:00 PM",
+        "end": "9:00 PM"
+      },
+      {
+        "name": "Marina",
+        "start": "9:45 PM",
+        "end": "10:45 PM"
+      },
+      {
+        "name": "JPEGMAFIA",
+        "start": "12:30 AM",
+        "end": "1:45 AM"
+      }
+    ],
+    "That Tent": [
+      {
+        "name": "Ginger Root",
+        "start": "1:30 PM",
+        "end": "2:15 PM"
+      },
+      {
+        "name": "Leon Thomas",
+        "start": "2:45 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "name": "Mannequin Pussy",
+        "start": "4:15 PM",
+        "end": "5:15 PM"
+      },
+      {
+        "name": "Bossman Dlow",
+        "start": "5:45 PM",
+        "end": "6:45 PM"
+      },
+      {
+        "name": "Damiano David",
+        "start": "7:30 PM",
+        "end": "8:30 PM"
+      },
+      {
+        "name": "Rainbow Kitten Surprise",
+        "start": "9:30 PM",
+        "end": "10:45 PM"
+      },
+      {
+        "name": "Megadeth",
+        "start": "12:45 AM",
+        "end": "2:00 AM"
+      }
+    ],
+    "Snake & Jake's Christmas Club Barn": [
+      {
+        "name": "Socks Education w/ Glowjob & Joy Rhyde",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "name": "Ride'em Cowboy: EDM Linedancing w/ TFB",
+        "start": "1:30 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "name": "Speed Dating",
+        "start": "3:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Lease on Love w/ Igrac",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "name": "Sax & Candy w/ Saxsquatch",
+        "start": "2:00 AM",
+        "end": "3:15 AM"
+      }
+    ]
+  },
+  "Saturday": {
+    "What Stage": [
+      {
+        "name": "Gigi Perez",
+        "start": "3:00 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "Raye",
+        "start": "4:30 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "name": "Beabadoobee",
+        "start": "6:15 PM",
+        "end": "7:15 PM"
+      },
+      {
+        "name": "Avril Lavigne",
+        "start": "8:15 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "name": "Olivia Rodrigo",
+        "start": "10:30 PM",
+        "end": "12:00 AM"
+      }
+    ],
+    "Which Stage": [
+      {
+        "name": "Thee Sinseers and the Altons",
+        "start": "2:15 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Flatland Cavalry",
+        "start": "3:45 PM",
+        "end": "4:45 PM"
+      },
+      {
+        "name": "Jesse Murph",
+        "start": "5:30 PM",
+        "end": "6:30 PM"
+      },
+      {
+        "name": "Mt. Joy",
+        "start": "7:30 PM",
+        "end": "8:30 PM"
+      },
+      {
+        "name": "Nelly",
+        "start": "9:30 PM",
+        "end": "10:30 PM"
+      },
+      {
+        "name": "Justice",
+        "start": "12:15 AM",
+        "end": "1:30 AM"
+      }
+    ],
+    "The Other": [
+      {
+        "name": "Ahee",
+        "start": "3:45 PM",
+        "end": "4:45 PM"
+      },
+      {
+        "name": "Rossy",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "name": "What So Not",
+        "start": "6:15 PM",
+        "end": "7:15 PM"
+      },
+      {
+        "name": "Claptone",
+        "start": "7:30 PM",
+        "end": "8:30 PM"
+      },
+      {
+        "name": "Jade Cicada",
+        "start": "8:45 PM",
+        "end": "9:45 PM"
+      },
+      {
+        "name": "RL Grime",
+        "start": "10:00 PM",
+        "end": "11:00 PM"
+      },
+      {
+        "name": "Crankdat",
+        "start": "12:30 AM",
+        "end": "1:45 AM"
+      },
+      {
+        "name": "Gorgon City",
+        "start": "2:15 AM",
+        "end": "5:15 AM"
+      }
+    ],
+    "Infinity Stage": [
+      {
+        "name": "Melt",
+        "start": "1:30 PM",
+        "end": "2:15 PM"
+      },
+      {
+        "name": "Cameron Winter",
+        "start": "3:00 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "Mary Droppinz",
+        "start": "4:45 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "name": "Big Gigantic (DJ Set)",
+        "start": "6:30 PM",
+        "end": "7:30 PM"
+      },
+      {
+        "name": "Levity",
+        "start": "8:30 PM",
+        "end": "9:30 PM"
+      },
+      {
+        "name": "Saxsquach",
+        "start": "11:00 PM",
+        "end": "12:00 AM"
+      },
+      {
+        "name": "Blacklizt",
+        "start": "1:45 AM",
+        "end": "2:45 AM"
+      }
+    ],
+    "This Tent": [
+      {
+        "name": "The Stews",
+        "start": "2:00 PM",
+        "end": "2:45 PM"
+      },
+      {
+        "name": "Ziggy Alberts",
+        "start": "3:30 PM",
+        "end": "4:15 PM"
+      },
+      {
+        "name": "Dope Lemon",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "name": "Wave to Earth",
+        "start": "6:45 PM",
+        "end": "7:45 PM"
+      },
+      {
+        "name": "Remi Wolf SuperJam",
+        "start": "8:45 PM",
+        "end": "10:15 PM"
+      },
+      {
+        "name": "King Gizzard & The Lizard Wizard",
+        "start": "12:15 AM",
+        "end": "2:15 AM"
+      }
+    ],
+    "That Tent": [
+      {
+        "name": "Destroy Boys",
+        "start": "1:30 PM",
+        "end": "2:15 PM"
+      },
+      {
+        "name": "Dadi Freyr",
+        "start": "2:45 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "name": "Hot Mulligan",
+        "start": "4:15 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Action Bronson",
+        "start": "5:45 PM",
+        "end": "6:45 PM"
+      },
+      {
+        "name": "Tyla",
+        "start": "7:30 PM",
+        "end": "8:30 PM"
+      },
+      {
+        "name": "Modest Mouse",
+        "start": "9:15 PM",
+        "end": "10:30 PM"
+      },
+      {
+        "name": "Arcade Fire",
+        "start": "1:00 AM",
+        "end": "2:15 AM"
+      }
+    ],
+    "Snake & Jake's Christmas Club Barn": [
+      {
+        "name": "Paint Me Like One of Your Frenchies",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "name": "This is Why We are Single Talent Show w/ TFB",
+        "start": "1:30 PM",
+        "end": "2:30 PM"
+      },
+      {
+        "name": "Speed Dating w/ Nectar",
+        "start": "3:00 PM",
+        "end": "5:00 PM"
+      },
+      {
+        "name": "Robe Rage w/ C'est Funk",
+        "start": "1:30 AM",
+        "end": "5:00 AM"
+      }
+    ]
+  },
+  "Sunday": {
+    "What Stage": [
+      {
+        "name": "James Arthur",
+        "start": "2:00 PM",
+        "end": "2:45 PM"
+      },
+      {
+        "name": "Role Model",
+        "start": "3:30 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Remi Wolf",
+        "start": "5:15 PM",
+        "end": "6:15 PM"
+      },
+      {
+        "name": "Vampire Weekend",
+        "start": "7:15 PM",
+        "end": "8:30 PM"
+      },
+      {
+        "name": "Hozier",
+        "start": "9:30 PM",
+        "end": "11:00 PM"
+      }
+    ],
+    "Which Stage": [
+      {
+        "name": "Alexandra Kay",
+        "start": "1:15 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Treaty Oak Revival",
+        "start": "2:45 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "Royel Otis",
+        "start": "4:30 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "name": "King Gizzard & The Lizard Wizard",
+        "start": "6:15 PM",
+        "end": "7:15 PM"
+      },
+      {
+        "name": "Queens of the Stone Age",
+        "start": "8:15 PM",
+        "end": "9:30 PM"
+      }
+    ],
+    "The Other": [
+      {
+        "name": "YDG",
+        "start": "1:45 PM",
+        "end": "2:45 PM"
+      },
+      {
+        "name": "GorillaT",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Zingara",
+        "start": "4:15 PM",
+        "end": "5:15 PM"
+      },
+      {
+        "name": "Atliens",
+        "start": "5:30 PM",
+        "end": "6:30 PM"
+      },
+      {
+        "name": "Big Gigantic",
+        "start": "6:45 PM",
+        "end": "7:45 PM"
+      },
+      {
+        "name": "LSZEE",
+        "start": "8:15 PM",
+        "end": "9:30 PM"
+      }
+    ],
+    "Infinity Stage": [
+      {
+        "name": "Photay",
+        "start": "2:00 PM",
+        "end": "2:45 PM"
+      },
+      {
+        "name": "Post Sex Nachos",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Arooj Aftab",
+        "start": "5:30 PM",
+        "end": "6:15 PM"
+      },
+      {
+        "name": "Zingara",
+        "start": "7:15 PM",
+        "end": "8:15 PM"
+      },
+      {
+        "name": "Washed Out",
+        "start": "9:45 PM",
+        "end": "10:45 PM"
+      }
+    ],
+    "This Tent": [
+      {
+        "name": "Goldie Boutilier",
+        "start": "1:15 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Natasha Bedingfield",
+        "start": "2:45 PM",
+        "end": "3:30 PM"
+      },
+      {
+        "name": "Saint Motel",
+        "start": "4:15 PM",
+        "end": "5:15 PM"
+      },
+      {
+        "name": "Barry Cant Swim",
+        "start": "6:00 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "name": "Glorilla",
+        "start": "7:45 PM",
+        "end": "8:45 PM"
+      }
+    ],
+    "That Tent": [
+      {
+        "name": "Grace Bowers",
+        "start": "1:30 PM",
+        "end": "2:15 PM"
+      },
+      {
+        "name": "Alex Warren",
+        "start": "3:00 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "Bilmuri",
+        "start": "4:30 PM",
+        "end": "5:30 PM"
+      },
+      {
+        "name": "Jack's Mannequin",
+        "start": "6:15 PM",
+        "end": "7:15 PM"
+      },
+      {
+        "name": "Dispatch",
+        "start": "8:00 PM",
+        "end": "9:15 PM"
+      }
+    ],
+    "Snake & Jake's Christmas Club Barn": [
+      {
+        "name": "Astrology & Tarot w/ Wild Waves",
+        "start": "12:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Hot Dogs and Hot Dads w/ Festival Babes",
+        "start": "12:30 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Speed Dating w/ Nectar",
+        "start": "3:00 PM",
+        "end": "5:00 PM"
+      }
+    ]
+  }
+}

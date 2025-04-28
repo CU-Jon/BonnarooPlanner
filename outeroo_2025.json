@@ -1,0 +1,487 @@
+{
+  "Wednesday": {
+    "Groop Camp": [
+      {
+        "name": "Camp Clear Piss Hydration Meetup",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "name": "The Great Bonnaroo Sticker Hunt",
+        "start": "1:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Chess Meetup",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Roo Bus Pre Party",
+        "start": "4:00 PM",
+        "end": "1:00 AM"
+      }
+    ],
+    "House of YES": [
+      {
+        "name": "Roolesque",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "name": "Wet Nightmare",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "name": "Waffle House of Yes",
+        "start": "10:00 PM",
+        "end": "2:00 AM"
+      }
+    ],
+    "Frick Frack Casino": [],
+    "The Rest Stop": [
+      {
+        "name": "Journal Making with the Bottom Crew",
+        "start": "12:00 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Soundscape Harmony",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Small World Yoga",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
+      }
+    ],
+    "Who Stage": [
+      {
+        "name": "Yomi That Harpist",
+        "start": "7:00 AM",
+        "end": "8:00 AM"
+      }
+    ],
+    "Where in the Woods": [
+      {
+        "name": "Carousel Nashville",
+        "start": "8:00 PM",
+        "end": "12:30 AM"
+      },
+      {
+        "name": "GXM (GRRL x Made Of Oak)",
+        "start": "1:00 AM",
+        "end": "3:00 AM"
+      }
+    ]
+  },
+  "Thursday": {
+    "Groop Camp": [],
+    "House of YES": [
+      {
+        "name": "Get Yer A$$ Up w/ Material Witness",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Clown Cult",
+        "start": "2:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "name": "Roolesque!",
+        "start": "7:00 PM",
+        "end": "8:00 PM"
+      },
+      {
+        "name": "Wet Nightmare",
+        "start": "8:00 PM",
+        "end": "9:00 PM"
+      },
+      {
+        "name": "Haunted House of Yes",
+        "start": "12:00 AM",
+        "end": "3:00 AM"
+      }
+    ],
+    "Frick Frack Casino": [
+      {
+        "name": "Frick Frack Black Jack",
+        "start": "12:00 AM",
+        "end": "5:00 AM"
+      }
+    ],
+    "The Rest Stop": [
+      {
+        "name": "Mindful Mornings Small World Yoga",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "name": "Patch Making w/ Bottom Crew",
+        "start": "10:00 AM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Cosmic Oasis Clothing & Book Swap",
+        "start": "1:00 PM",
+        "end": "4:00 PM"
+      }
+    ],
+    "Who Stage": [
+      {
+        "name": "Yomi That Harpist",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "name": "Shannon Lauren Callihan",
+        "start": "12:00 PM",
+        "end": "3:45 PM"
+      },
+      {
+        "name": "John Muq",
+        "start": "1:12 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Crumb Snatchers",
+        "start": "2:30 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Courting",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Boy Golden",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "Griffin William Sherry",
+        "start": "6:15 PM",
+        "end": "7:00 PM"
+      },
+      {
+        "name": "Vault Boy",
+        "start": "7:30 PM",
+        "end": "8:15 PM"
+      },
+      {
+        "name": "People R Ugly",
+        "start": "8:45 PM",
+        "end": "9:30 PM"
+      }
+    ],
+    "Where in the Woods": [
+      {
+        "name": "Unruly Atlanta",
+        "start": "1:00 AM",
+        "end": "3:00 AM"
+      },
+      {
+        "name": "Nasa x Dublab",
+        "start": "3:00 AM",
+        "end": "6:00 AM"
+      }
+    ]
+  },
+  "Friday": {
+    "Groop Camp": [
+      {
+        "name": "Camp Reddaroo Craft Beer Exchange",
+        "start": "10:30 AM",
+        "end": "11:30 AM"
+      },
+      {
+        "name": "Disc Golf",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      }
+    ],
+    "House of YES": [
+      {
+        "name": "Get Yer A$$ Up w/ Ultra Violet",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Clown Cult",
+        "start": "2:00 PM",
+        "end": "6:00 PM"
+      },
+      {
+        "name": "Nursing Home of Yes w/ Material Witness & Ultra Violet",
+        "start": "1:00 AM",
+        "end": "4:00 AM"
+      }
+    ],
+    "Frick Frack Casino": [
+      {
+        "name": "Frick Frack Black Jack",
+        "start": "12:00 AM",
+        "end": "5:00 AM"
+      }
+    ],
+    "The Rest Stop": [
+      {
+        "name": "Mindful Mornings Small World Yoga",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "name": "Movement Toolkit w/ KC&D",
+        "start": "10:00 AM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "DIY Upcycling Station",
+        "start": "1:00 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Soundscape Harmony w/ DJ Soularia",
+        "start": "3:00 PM",
+        "end": "4:00 PM"
+      }
+    ],
+    "Who Stage": [
+      {
+        "name": "Yomi That Harpist",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "name": "The Takes",
+        "start": "12:00 PM",
+        "end": "12:45 PM"
+      },
+      {
+        "name": "Abbie Callahan",
+        "start": "1:15 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "SugarDaisy",
+        "start": "2:30 PM",
+        "end": "3:15 PM"
+      },
+      {
+        "name": "Dogpark",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Hello Mary",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "Lip Critic",
+        "start": "6:15 PM",
+        "end": "7:00 PM"
+      }
+    ],
+    "Where in the Woods": [
+      {
+        "name": "Gimme a Reason",
+        "start": "11:00 AM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Jolene Soundroom",
+        "start": "1:00 PM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Nasa x Dublab",
+        "start": "3:00 PM",
+        "end": "6:00 PM"
+      }
+    ]
+  },
+  "Saturday": {
+    "Groop Camp": [],
+    "House of YES": [
+      {
+        "name": "Holding Space: a Queer Meetup",
+        "start": "12:30 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Clown Cult",
+        "start": "2:00 PM",
+        "end": "6:00 PM"
+      }
+    ],
+    "Frick Frack Casino": [
+      {
+        "name": "Frick Frack Black Jack",
+        "start": "12:00 AM",
+        "end": "5:00 AM"
+      }
+    ],
+    "The Rest Stop": [
+      {
+        "name": "Mindful Mornings Small World Yoga",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "name": "Community Collaging w/ Bottom Crew",
+        "start": "10:00 AM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Banned Book Discussion w/ Annastasia",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "name": "DIY Upcycling Station",
+        "start": "1:00 PM",
+        "end": "3:00 PM"
+      }
+    ],
+    "Who Stage": [
+      {
+        "name": "Yomi That Harpist",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "name": "Timmy Skelly",
+        "start": "12:00 PM",
+        "end": "12:45 PM"
+      },
+      {
+        "name": "Truman Sinclair",
+        "start": "1:15 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Motherfolk",
+        "start": "2:30 PM",
+        "end": "3:15 PM"
+      },
+      {
+        "name": "Elke",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Carter Vail",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "The Psycodelics",
+        "start": "6:15 PM",
+        "end": "7:00 PM"
+      }
+    ],
+    "Where in the Woods": [
+      {
+        "name": "The Low Down",
+        "start": "11:00 AM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Super Queer Ultra Gay Pride Party",
+        "start": "2:00 AM",
+        "end": "5:00 AM"
+      }
+    ]
+  },
+  "Sunday": {
+    "Groop Camp": [],
+    "House of YES": [
+      {
+        "name": "Get Yer A$$ Up w/ Ultra Violet",
+        "start": "12:00 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Clown Cult",
+        "start": "2:00 PM",
+        "end": "6:00 PM"
+      }
+    ],
+    "Frick Frack Casino": [],
+    "The Rest Stop": [
+      {
+        "name": "Mindful Mornings Small World Yoga",
+        "start": "9:00 AM",
+        "end": "10:00 AM"
+      },
+      {
+        "name": "Herbal Wellness Workshop",
+        "start": "10:00 AM",
+        "end": "3:00 PM"
+      },
+      {
+        "name": "Cosmic Oasis Fashion Show w/ Konane Wildcraft",
+        "start": "12:00 PM",
+        "end": "1:00 PM"
+      },
+      {
+        "name": "Giant Puppet Parade",
+        "start": "2:00 PM",
+        "end": "3:00 PM"
+      }
+    ],
+    "Who Stage": [
+      {
+        "name": "Yomi That Harpist",
+        "start": "10:00 AM",
+        "end": "11:00 AM"
+      },
+      {
+        "name": "Raw Honey",
+        "start": "12:00 PM",
+        "end": "12:45 PM"
+      },
+      {
+        "name": "The Greeting Committee",
+        "start": "1:15 PM",
+        "end": "2:00 PM"
+      },
+      {
+        "name": "Army / Navy",
+        "start": "2:30 PM",
+        "end": "3:15 PM"
+      },
+      {
+        "name": "Morgan Johnson",
+        "start": "3:45 PM",
+        "end": "4:30 PM"
+      },
+      {
+        "name": "Franni Cash",
+        "start": "5:00 PM",
+        "end": "5:45 PM"
+      },
+      {
+        "name": "Veaux",
+        "start": "6:15 PM",
+        "end": "7:00 PM"
+      }
+    ],
+    "Where in the Woods": [
+      {
+        "name": "Floppy Disco Austin",
+        "start": "11:00 AM",
+        "end": "4:00 PM"
+      },
+      {
+        "name": "Taylor Hanson",
+        "start": "5:00 PM",
+        "end": "6:00 PM"
+      }
+    ]
+  }
+}
