@@ -20,11 +20,30 @@ $centeroo = json_decode(file_get_contents($centerooFile), true);
 $outeroo = json_decode(file_get_contents($outerooFile), true);
 
 function timeToMinutes($time) {
-    $parts = date_parse_from_format('g:i A', $time);
-    return $parts['hour'] * 60 + $parts['minute'];
+    // Convert "h:mm AM/PM" to minutes since 00:00,
+    // but treat 12 AM – 6:00 AM as the “next day” so
+    // they render after the day’s main events.
+
+    // Change the cutoff here if Bonnaroo ever shifts its schedule
+    $LATE_NIGHT_CUTOFF = 6 * 60;    // 06:00 AM  ➜  360 minutes
+
+    // Parse a “h:mm AM/PM” string into minutes since 00:00
+    $parts   = date_parse_from_format('g:i A', $time);
+    $minutes = $parts['hour'] * 60 + $parts['minute'];
+
+    /* Push anything that starts before the cutoff into the “next day”
+       so it sorts *after* the daytime block. */
+    if ($minutes <= $LATE_NIGHT_CUTOFF) {
+        $minutes += 1440;          // add 24 hours
+    }
+    return $minutes;
 }
 
 function minutesToTime($minutes) {
+    // Wrap values ≥ 24 h back into a normal 12-hour clock string
+    if ($minutes >= 1440) {
+        $minutes -= 1440;
+    }
     $h = floor($minutes / 60);
     $m = $minutes % 60;
     $ampm = $h >= 12 ? 'PM' : 'AM';
@@ -42,12 +61,16 @@ function buildForm($data, $type) {
             echo "<div class='location-block'><h3>" . htmlspecialchars($location) . "</h3>";
             foreach ($events as $event) {
                 $label = htmlspecialchars("{$event['name']} ({$event['start']} - {$event['end']})");
-                $value = htmlentities(json_encode([
-                    'type' => $type,
-                    'day' => $day,
-                    'location' => $location,
-                    'event' => $event
-                ]));
+                $value = htmlentities(
+                    json_encode([
+                        'type'     => $type,
+                        'day'      => $day,
+                        'location' => $location,
+                        'event'    => $event
+                    ]),
+                    ENT_QUOTES,      // ← escape *both* single and double quotes
+                    'UTF-8'
+                );                
                 echo "<label><input type='checkbox' name='selection[]' value='{$value}'> {$label}</label><br>";
             }
             echo "</div>";
@@ -158,7 +181,11 @@ select#year:hover {
     font-size: 1.2em;
     color: #FF69B4;
 }
-button[type='submit'], button#printButton, button#pdfButton, a#startOver {
+.left-time-col {
+    white-space: nowrap;
+    overflow: hidden;
+}
+button[type='submit'], button#printButton, button#pdfButton, a#startOver, button[type='button'] {
     background-color: #6A0DAD;
     color: white;
     font-family: 'Concert One', cursive;
@@ -175,9 +202,44 @@ button:hover, a#startOver:hover {
     background-color: #FF69B4;
     transform: scale(1.05);
 }
+.plannerType {
+    margin-top:40px;
+    text-decoration: underline;
+    font-weight: bold;
+}
 @media print {
     #printButton, #pdfButton, #startOver {
         display: none;
+    }
+    body {
+        background: none !important;          /* remove colour / image */
+        -webkit-print-color-adjust: exact;    /* still let text keep its colour if you use any */
+    }
+    /* don’t waste vertical space with the on-screen h3 */
+    h2.day-heading-screen {
+        display: none;
+    }
+    /* style the repeated day header row if you like */
+    .day-heading-print th {
+        text-align: center;
+        font-size: 20px;
+        padding: 4px 0;
+        font-weight: bold;
+        color: #6A0DAD;
+        text-decoration: underline;
+    }
+    .print-instructions {
+        display: none;
+    }
+}
+@media screen {
+    /* keep the original h3 for on-screen use only */
+    .day-heading-print {
+        display: none;
+    }     /* don’t show extra header row on screen */
+    .day-heading-screen {
+        font-weight: bold;
+        text-decoration: underline;
     }
 }
 </style>
@@ -216,15 +278,27 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
 
     echo "<div class='container' id='planner-content'>";
     echo "<h1>Your Custom Bonnaroo {$selectedYear} Planner</h1>";
+    echo "<h3 class='print-instructions'>Scroll down to print this page or save to PDF!</h3>";
 
     foreach ($grouped as $type => $days) {
-        echo "<h2 style='margin-top:40px;'>" . htmlspecialchars($type) . "</h2>";
+        echo "<h1 class='plannerType'>" . htmlspecialchars($type) . "</h1>";
 
         foreach ($days as $day => $locations) {
-            echo "<h3>" . htmlspecialchars($day) . "</h3>";
-            echo "<table class='day-section' data-day='" . htmlspecialchars($day) . "'>";
-            echo "<thead><tr><th>Time</th>";
+            /* on-screen heading */
+            echo "<h2 class='day-heading-screen'>" . htmlspecialchars($day) . "</h2>";
 
+            /* table + a first header row that just holds the day title */
+            echo "<table class='day-section' data-day='" . htmlspecialchars($day) . "'>";
+            echo "<thead>";
+
+            /* repeat-me header row (one cell spanning the whole width) */
+            $colspan = count($locations) + 1;            // +1 for the “Time” column
+            echo "<tr class='day-heading-print'><th colspan='{$colspan}'>"
+                . htmlspecialchars($day)
+                . "</th></tr>";
+
+            /* the normal column headers */
+            echo "<tr><th>Time</th>";
             $stageNames = array_keys($locations);
             foreach ($stageNames as $stage) {
                 echo "<th>" . htmlspecialchars($stage) . "</th>";
@@ -290,6 +364,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
             <button class='tablinks' onclick=\"openTab(event, 'Centeroo')\">Centeroo</button>
             <button class='tablinks' onclick=\"openTab(event, 'Outeroo')\">Outeroo</button>
           </div>";
+    echo "<div style=\"margin:15px 0;\">
+            <button type=\"button\" onclick=\"toggleSelection(true)\">Select all</button>
+            <button type=\"button\" onclick=\"toggleSelection(false)\">Deselect all</button>
+          </div>";
     echo "<form method='POST'>";
     buildForm($centeroo, 'Centeroo');
     buildForm($outeroo, 'Outeroo');
@@ -302,6 +380,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 <script>
 function openTab(evt, tabName) {
+    document.querySelectorAll("input[type='checkbox']").forEach(cb => cb.checked = false);
     var i, tabcontent, tablinks;
     tabcontent = document.getElementsByClassName("tabcontent");
     for (i = 0; i < tabcontent.length; i++) {
@@ -324,23 +403,51 @@ function printPlanner() {
     window.print();
 }
 
+/* Select / deselect only the checkboxes in the visible tab */
+function toggleSelection(state) {
+    const activeTab = document.querySelector(".tabcontent[style*='block']");
+    if (!activeTab) return;
+    activeTab.querySelectorAll("input[type='checkbox']").forEach(cb => cb.checked = state);
+}
+
 function downloadPDF() {
     const { jsPDF } = window.jspdf;
-    const doc = new jsPDF();
-    const tables = document.querySelectorAll(".day-section");
+    const doc = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'letter' });
+
+    const tables = document.querySelectorAll('.day-section');
+    const plannerTitle = 'Bonnaroo <?php echo $selectedYear; ?> Planner';
 
     tables.forEach((table, index) => {
-        if (index > 0) doc.addPage();
-        const day = table.getAttribute('data-day');
-        doc.setFontSize(18);
-        doc.text(day, 15, 20);
+        if (index > 0) doc.addPage();               // new page between days
+
+        const day       = table.getAttribute('data-day');
+        const firstPage = doc.internal.getNumberOfPages();  // page where this day starts
+
         doc.autoTable({
-            html: table,
-            startY: 30,
-            theme: 'grid',
-            headStyles: { fillColor: [106, 13, 173] },
-            styles: { font: 'helvetica', fontSize: 9 },
-            margin: { top: 20 }
+            html   : table,
+            startY : 70,                             // leave space for both headers
+            margin : { top: 70 },
+            theme  : 'grid',
+            headStyles: { fillColor: [106, 13, 173], fontStyle: 'bold' },
+            styles    : { font: 'helvetica', fontSize: 9, halign: 'center', valign: 'middle' },
+
+            didDrawPage: function () {
+                const pageInfo = doc.internal.getCurrentPageInfo();
+                const pageWidth = doc.internal.pageSize.getWidth();
+
+                /* ----- global planner header (every page) ----- */
+                doc.setFontSize(14);
+                doc.setTextColor(0, 0, 0);
+                doc.text(plannerTitle, pageWidth / 2, 30, { align: 'center' });
+
+                /* ----- day header or “(Continued)” ----- */
+                doc.setFontSize(18);
+                if (pageInfo.pageNumber === firstPage) {
+                    doc.text(day, 40, 50);               // e.g. “Thursday”
+                } else {
+                    doc.text(day + ' (Continued)', 40, 50);
+                }
+            }
         });
     });
 
