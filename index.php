@@ -143,6 +143,8 @@ function buildForm($data, $type) {
 
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
+    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>';
+    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>';
     $selections = array_map('json_decode', $_POST['selection']);
     $grouped = [];
 
@@ -275,9 +277,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
     echo "</div>";
 }
 ?>
-
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>
 <script src="plannerFunctions.js"></script>
 <script>
     function downloadPDF() {

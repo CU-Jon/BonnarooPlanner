@@ -142,6 +142,16 @@ button:hover, a#startOver:hover {
     .print-instructions {
         display: none;
     }
+    table.day-section {
+        /* modern syntax (Chromium, Firefox, Safari ≥ 16) */
+        break-before: page;
+        /* fallback for older Chrome / legacy engines */
+        page-break-before: always;
+    }
+    table.day-section:first-of-type {
+        break-before: auto;
+        page-break-before: auto;
+    }
 }
 @media screen {
     /* keep the original h3 for on-screen use only */
