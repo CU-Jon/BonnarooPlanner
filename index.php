@@ -18,8 +18,8 @@ if (!file_exists($centerooFile) || !file_exists($outerooFile)) {
     die("Data for the selected year is not available.");
 }
 
-$centeroo = json_decode(file_get_contents($centerooFile), true);
-$outeroo = json_decode(file_get_contents($outerooFile), true);
+$centeroo = json_decode(file_get_contents($centerooFile));
+$outeroo = json_decode(file_get_contents($outerooFile));
 
 function timeToMinutes($time) {
     // Convert "h:mm AM/PM" to minutes since 00:00,
@@ -54,6 +54,53 @@ function minutesToTime($minutes) {
     return sprintf("%d:%02d %s", $h, $m, $ampm);
 }
 
+/**
+ * Collapse **overlapping** events for the same location/day into one
+ * synthetic block – but keep every individual title + (time-range)
+ */
+function mergeOverlapsWithDetail(array $events): array
+{
+    /* 1.  Put them in chronological order */
+    usort($events, fn($a, $b) =>
+        timeToMinutes($a->start) <=> timeToMinutes($b->start)
+    );
+
+    $buckets = [];
+    foreach ($events as $ev) {
+        $s = timeToMinutes($ev->start);
+        $e = timeToMinutes($ev->end);
+
+        /* 2.  Does this event overlap the last bucket? */
+        if (!$buckets || $s >= $buckets[array_key_last($buckets)]['end']) {
+            // no overlap → start new bucket
+            $buckets[] = [
+                'start'  => $s,
+                'end'    => $e,
+                'lines'  => [htmlspecialchars($ev->name)
+                            . "<br><small>$ev->start&nbsp;–&nbsp;$ev->end</small>"]
+            ];
+        } else {
+            // overlaps → extend existing bucket
+            $bucketsKey = array_key_last($buckets);
+            $buckets[$bucketsKey]['end']  = max($buckets[$bucketsKey]['end'], $e);
+            $buckets[$bucketsKey]['lines'][] =
+                htmlspecialchars($ev->name)
+              . "<br><small>$ev->start&nbsp;–&nbsp;$ev->end</small>";
+        }
+    }
+
+    /* 3.  Convert buckets back into “event objects” */
+    $out = [];
+    foreach ($buckets as $b) {
+        $out[] = (object) [
+            'name'  => implode('<br><br>', $b['lines']),
+            'start' => minutesToTime($b['start']),
+            'end'   => minutesToTime($b['end'])
+        ];
+    }
+    return $out;
+}
+
 function buildForm($data, $type) {
     echo "<div id='" . htmlspecialchars($type) . "' class='tabcontent'>";
     foreach ($data as $day => $locations) {
@@ -62,7 +109,7 @@ function buildForm($data, $type) {
             if (empty($events)) continue;
             echo "<div class='location-block'><h3>" . htmlspecialchars($location) . "</h3>";
             foreach ($events as $event) {
-                $label = htmlspecialchars("{$event['name']} ({$event['start']} - {$event['end']})");
+                $label = htmlspecialchars("{$event->name} ({$event->start} - {$event->end})");
                 $value = htmlentities(
                     json_encode([
                         'type'     => $type,
@@ -81,6 +128,7 @@ function buildForm($data, $type) {
     }
     echo "</div>";
 }
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -139,7 +187,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
             echo "<thead>";
 
             /* repeat-me header row (one cell spanning the whole width) */
-            $colspan = count($locations) + 1;            // +1 for the “Time” column
+            $colspan = count($locations) + 1;             // +1 for the “Time” column
             echo "<tr class='day-heading-print'><th colspan='{$colspan}'>"
                 . htmlspecialchars($day)
                 . "</th></tr>";
@@ -147,6 +195,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
             /* the normal column headers */
             echo "<tr><th>Time</th>";
             $stageNames = array_keys($locations);
+            /* merge overlaps only for rendering */
+            $stageEvents = [];
+            foreach ($stageNames as $stg) {
+                $stageEvents[$stg] = mergeOverlapsWithDetail($locations[$stg]);
+            }
             foreach ($stageNames as $stage) {
                 echo "<th>" . htmlspecialchars($stage) . "</th>";
             }
@@ -165,7 +218,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
                     }
 
                     $eventFound = null;
-                    foreach ($locations[$stage] as $event) {
+                    foreach ($stageEvents[$stage] as $event) {
                         $start = timeToMinutes($event->start);
                         $end = timeToMinutes($event->end);
                         if ($start == $time) {
@@ -177,7 +230,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
 
                     if ($eventFound) {
                         $span = ($end - $start) / 15;
-                        echo "<td rowspan='{$span}'>" . htmlspecialchars($eventFound->name) . "<br><small>" . htmlspecialchars($eventFound->start) . " - " . htmlspecialchars($eventFound->end) . "</small></td>";
+                        echo "<td rowspan='{$span}'>{$eventFound->name}</div></td>";
                     } else {
                         echo "<td></td>";
                     }
