@@ -39,7 +39,13 @@
                 "end": "2:00 AM"
             }
         ],
-        "Frick Frack Casino": [],
+        "Frick Frack Casino": [
+            {
+                "name": "Frick Frack Black Jack",
+                "start": "12:00 AM",
+                "end": "5:00 AM"
+            }
+        ],
         "The Rest Stop": [
             {
                 "name": "Journal Making with the Bottom Crew",
@@ -142,8 +148,8 @@
                 "end": "3:45 PM"
             },
             {
-                "name": "John Muq",
-                "start": "1:12 PM",
+                "name": "Jon Muq",
+                "start": "1:15 PM",
                 "end": "2:00 PM"
             },
             {
@@ -234,7 +240,7 @@
                 "end": "10:00 AM"
             },
             {
-                "name": "Movement Toolkit w/ KC&D",
+                "name": "Movement Toolkit w/ KCSD",
                 "start": "10:00 AM",
                 "end": "3:00 PM"
             },
@@ -294,13 +300,13 @@
             },
             {
                 "name": "Jolene Soundroom",
-                "start": "1:00 PM",
-                "end": "3:00 PM"
+                "start": "1:00 AM",
+                "end": "3:00 AM"
             },
             {
-                "name": "Nasa x Dublab",
-                "start": "3:00 PM",
-                "end": "6:00 PM"
+                "name": "Nasa x Dublab Deep Space",
+                "start": "3:00 AM",
+                "end": "6:00 AM"
             }
         ]
     },
@@ -451,7 +457,7 @@
                 "end": "2:00 PM"
             },
             {
-                "name": "Army / Navy",
+                "name": "The Army, The Navy",
                 "start": "2:30 PM",
                 "end": "3:15 PM"
             },
