@@ -132,197 +132,197 @@ function buildForm($data, $type) {
 ?>
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Bonnaroo Planner</title>
-    <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Bonnaroo Planner</title>
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <script src="plannerFunctions.js" defer></script>
+    </head>
+    <body>
+        <?php
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>';
+            echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>';
+            $selections = array_map('json_decode', $_POST['selection']);
+            $grouped = [];
 
-<?php
-if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['selection'])) {
-    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>';
-    echo '<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.23/jspdf.plugin.autotable.min.js"></script>';
-    $selections = array_map('json_decode', $_POST['selection']);
-    $grouped = [];
-
-    foreach ($selections as $sel) {
-        if (is_object($sel) && isset($sel->type, $sel->day, $sel->location, $sel->event)) {
-            $grouped[$sel->type][$sel->day][$sel->location][] = $sel->event;
-        }
-    }
-
-    $timeGrid = [];
-    foreach ($grouped as $type => $days) {
-        foreach ($days as $day => $locations) {
-            $earliest = 1440;
-            $latest = 0;
-            foreach ($locations as $events) {
-                foreach ($events as $event) {
-                    $start = timeToMinutes($event->start);
-                    $end = timeToMinutes($event->end);
-                    if ($start < $earliest) $earliest = $start;
-                    if ($end > $latest) $latest = $end;
+            foreach ($selections as $sel) {
+                if (is_object($sel) && isset($sel->type, $sel->day, $sel->location, $sel->event)) {
+                    $grouped[$sel->type][$sel->day][$sel->location][] = $sel->event;
                 }
             }
-            $earliest = floor($earliest / 15) * 15;
-            $latest = ceil($latest / 15) * 15;
-            $timeGrid[$day] = ['start' => $earliest, 'end' => $latest];
-        }
-    }
 
-    echo "<div class='container' id='planner-content'>";
-    echo "<h1>Your Custom Bonnaroo {$selectedYear} Planner</h1>";
-    echo "<h3 class='print-instructions'>Scroll down to print this page or save to PDF!</h3>";
-
-    foreach ($grouped as $type => $days) {
-        echo "<h1 class='plannerType'>" . htmlspecialchars($type) . "</h1>";
-
-        foreach ($days as $day => $locations) {
-            /* on-screen heading */
-            echo "<h2 class='day-heading-screen'>" . htmlspecialchars($day) . "</h2>";
-
-            /* table + a first header row that just holds the day title */
-            echo "<table class='day-section' data-day='" . htmlspecialchars($day) . "'>";
-            echo "<thead>";
-
-            /* repeat-me header row (one cell spanning the whole width) */
-            $colspan = count($locations) + 1;             // +1 for the “Time” column
-            echo "<tr class='day-heading-print'><th colspan='{$colspan}'>"
-                . htmlspecialchars($day)
-                . "</th></tr>";
-
-            /* the normal column headers */
-            echo "<tr><th>Time</th>";
-            $stageNames = array_keys($locations);
-            /* merge overlaps only for rendering */
-            $stageEvents = [];
-            foreach ($stageNames as $stg) {
-                $stageEvents[$stg] = mergeOverlapsWithDetail($locations[$stg]);
-            }
-            foreach ($stageNames as $stage) {
-                echo "<th>" . htmlspecialchars($stage) . "</th>";
-            }
-            echo "</tr></thead><tbody>";
-
-            $rowSpanTracker = [];
-
-            for ($time = $timeGrid[$day]['start']; $time < $timeGrid[$day]['end']; $time += 15) {
-                echo "<tr>";
-                echo "<td class='left-time-col'>" . minutesToTime($time) . "</td>";
-
-                foreach ($stageNames as $stage) {
-                    if (isset($rowSpanTracker[$stage]) && $rowSpanTracker[$stage] > 0) {
-                        $rowSpanTracker[$stage]--;
-                        continue;
-                    }
-
-                    $eventFound = null;
-                    foreach ($stageEvents[$stage] as $event) {
-                        $start = timeToMinutes($event->start);
-                        $end = timeToMinutes($event->end);
-                        if ($start == $time) {
-                            $eventFound = $event;
-                            $rowSpanTracker[$stage] = ($end - $start) / 15 - 1;
-                            break;
+            $timeGrid = [];
+            foreach ($grouped as $type => $days) {
+                foreach ($days as $day => $locations) {
+                    $earliest = 1440;
+                    $latest = 0;
+                    foreach ($locations as $events) {
+                        foreach ($events as $event) {
+                            $start = timeToMinutes($event->start);
+                            $end = timeToMinutes($event->end);
+                            if ($start < $earliest) $earliest = $start;
+                            if ($end > $latest) $latest = $end;
                         }
                     }
-
-                    if ($eventFound) {
-                        $span = ($end - $start) / 15;
-                        echo "<td rowspan='{$span}'>{$eventFound->name}</div></td>";
-                    } else {
-                        echo "<td></td>";
-                    }
+                    $earliest = floor($earliest / 15) * 15;
+                    $latest = ceil($latest / 15) * 15;
+                    $timeGrid[$day] = ['start' => $earliest, 'end' => $latest];
                 }
-
-                echo "</tr>";
             }
 
-            echo "</tbody></table><br>";
-        }
-    }
+            echo "<div class='container' id='planner-content'>";
+            echo "<h1>Your Custom Bonnaroo {$selectedYear} Planner</h1>";
+            echo "<h3 class='print-instructions'>Scroll down to print this page or save to PDF!</h3>";
 
-    echo "<button id='printButton' onclick='printPlanner()'>Print</button> ";
-    echo "<button id='pdfButton' onclick='downloadPDF()'>Download as PDF</button><br><br>";
-    echo "<a href='" . htmlspecialchars($_SERVER['PHP_SELF']) . "?year={$selectedYear}' id='startOver'>Start Over</a>";
-    echo "</div>";
+            foreach ($grouped as $type => $days) {
+                echo "<h1 class='plannerType'>" . htmlspecialchars($type) . "</h1>";
 
-} else {
-    echo "<div class='container'>";
-    echo "<h1>Select Your Bonnaroo {$selectedYear} Events</h1>";
-    echo "<form method='GET' style='margin-bottom: 20px;'>
-            <label for='year'>Select Year:</label>
-            <select name='year' id='year' onchange='this.form.submit()'>";
-    foreach ($years as $year) {
-        $selected = $year == $selectedYear ? " selected" : "";
-        echo "<option value='{$year}'{$selected}>{$year}</option>";
-    }
-    echo "</select>
-          </form>";
-    echo "<div class='tab'>
-            <button class='tablinks' onclick=\"openTab(event, 'Centeroo')\">Centeroo</button>
-            <button class='tablinks' onclick=\"openTab(event, 'Outeroo')\">Outeroo</button>
-          </div>";
-    echo "<div style=\"margin:15px 0;\">
-            <button type=\"button\" onclick=\"toggleSelection(true)\">Select all</button>
-            <button type=\"button\" onclick=\"toggleSelection(false)\">Deselect all</button>
-          </div>";
-    echo "<form method='POST'>";
-    buildForm($centeroo, 'Centeroo');
-    buildForm($outeroo, 'Outeroo');
-    echo "<br><button type='submit'>Build My Planner!</button></form>";
-    echo "</div>";
-}
-?>
-<script src="plannerFunctions.js"></script>
-<script>
-    function downloadPDF() {
-        const { jsPDF } = window.jspdf;
-        const doc = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'letter' });
+                foreach ($days as $day => $locations) {
+                    /* on-screen heading */
+                    echo "<h2 class='day-heading-screen'>" . htmlspecialchars($day) . "</h2>";
 
-        const tables = document.querySelectorAll('.day-section');
-        const plannerType = '<?php echo $type; ?>';
-        const plannerTitle = 'Bonnaroo <?php echo $selectedYear; ?> Planner (' + plannerType + ')';
+                    /* table + a first header row that just holds the day title */
+                    echo "<table class='day-section' data-day='" . htmlspecialchars($day) . "'>";
+                    echo "<thead>";
 
-        tables.forEach((table, index) => {
-            if (index > 0) doc.addPage();               // new page between days
+                    /* repeat-me header row (one cell spanning the whole width) */
+                    $colspan = count($locations) + 1;             // +1 for the “Time” column
+                    echo "<tr class='day-heading-print'><th colspan='{$colspan}'>"
+                        . htmlspecialchars($day)
+                        . "</th></tr>";
 
-            const day       = table.getAttribute('data-day');
-            const firstPage = doc.internal.getNumberOfPages();  // page where this day starts
-
-            doc.autoTable({
-                html   : table,
-                startY : 70,                             // leave space for both headers
-                margin : { top: 70 },
-                theme  : 'grid',
-                headStyles: { fillColor: [106, 13, 173], fontStyle: 'bold' },
-                styles    : { font: 'helvetica', fontSize: 9, halign: 'center', valign: 'middle' },
-
-                didDrawPage: function () {
-                    const pageInfo = doc.internal.getCurrentPageInfo();
-                    const pageWidth = doc.internal.pageSize.getWidth();
-
-                    /* ----- global planner header (every page) ----- */
-                    doc.setFontSize(14);
-                    doc.setTextColor(0, 0, 0);
-                    doc.text(plannerTitle, pageWidth / 2, 30, { align: 'center' });
-
-                    /* ----- day header or “(Continued)” ----- */
-                    doc.setFontSize(18);
-                    if (pageInfo.pageNumber === firstPage) {
-                        doc.text(day, 40, 50);               // e.g. “Thursday”
-                    } else {
-                        doc.text(day + ' (Continued)', 40, 50);
+                    /* the normal column headers */
+                    echo "<tr><th>Time</th>";
+                    $stageNames = array_keys($locations);
+                    /* merge overlaps only for rendering */
+                    $stageEvents = [];
+                    foreach ($stageNames as $stg) {
+                        $stageEvents[$stg] = mergeOverlapsWithDetail($locations[$stg]);
                     }
-                }
-            });
-        });
+                    foreach ($stageNames as $stage) {
+                        echo "<th>" . htmlspecialchars($stage) . "</th>";
+                    }
+                    echo "</tr></thead><tbody>";
 
-    doc.save('Bonnaroo_Planner_<?php echo $selectedYear; ?>_' + plannerType + '.pdf');
-}
-</script>
-</body>
+                    $rowSpanTracker = [];
+
+                    for ($time = $timeGrid[$day]['start']; $time < $timeGrid[$day]['end']; $time += 15) {
+                        echo "<tr>";
+                        echo "<td class='left-time-col'>" . minutesToTime($time) . "</td>";
+
+                        foreach ($stageNames as $stage) {
+                            if (isset($rowSpanTracker[$stage]) && $rowSpanTracker[$stage] > 0) {
+                                $rowSpanTracker[$stage]--;
+                                continue;
+                            }
+
+                            $eventFound = null;
+                            foreach ($stageEvents[$stage] as $event) {
+                                $start = timeToMinutes($event->start);
+                                $end = timeToMinutes($event->end);
+                                if ($start == $time) {
+                                    $eventFound = $event;
+                                    $rowSpanTracker[$stage] = ($end - $start) / 15 - 1;
+                                    break;
+                                }
+                            }
+
+                            if ($eventFound) {
+                                $span = ($end - $start) / 15;
+                                echo "<td rowspan='{$span}'>{$eventFound->name}</div></td>";
+                            } else {
+                                echo "<td></td>";
+                            }
+                        }
+
+                        echo "</tr>";
+                    }
+
+                    echo "</tbody></table><br>";
+                }
+            }
+
+            echo "<button id='printButton' onclick='printPlanner()'>Print</button> ";
+            echo "<button id='pdfButton' onclick='downloadPDF()'>Download as PDF</button><br><br>";
+            echo "<a href='" . htmlspecialchars($_SERVER['PHP_SELF']) . "?year={$selectedYear}' id='startOver'>Start Over</a>";
+            echo "</div>";
+
+        } else {
+            echo "<div class='container'>";
+            echo "<h1>Select Your Bonnaroo {$selectedYear} Events</h1>";
+            echo "<form method='GET' style='margin-bottom: 20px;'>
+                    <label for='year'>Select Year:</label>
+                    <select name='year' id='year' onchange='this.form.submit()'>";
+            foreach ($years as $year) {
+                $selected = $year == $selectedYear ? " selected" : "";
+                echo "<option value='{$year}'{$selected}>{$year}</option>";
+            }
+            echo "</select>
+                </form>";
+            echo "<div class='tab'>
+                    <button class='tablinks' onclick=\"openTab(event, 'Centeroo')\">Centeroo</button>
+                    <button class='tablinks' onclick=\"openTab(event, 'Outeroo')\">Outeroo</button>
+                </div>";
+            echo "<div style=\"margin:15px 0;\">
+                    <button type=\"button\" onclick=\"toggleSelection(true)\">Select all</button>
+                    <button type=\"button\" onclick=\"toggleSelection(false)\">Deselect all</button>
+                </div>";
+            echo "<form method='POST'>";
+            buildForm($centeroo, 'Centeroo');
+            buildForm($outeroo, 'Outeroo');
+            echo "<br><button type='submit'>Build My Planner!</button></form>";
+            echo "</div>";
+        }
+        ?>
+
+        <script>
+            function downloadPDF() {
+                const { jsPDF } = window.jspdf;
+                const doc = new jsPDF({ orientation: 'portrait', unit: 'pt', format: 'letter' });
+
+                const tables = document.querySelectorAll('.day-section');
+                const plannerType = '<?php echo $type; ?>';
+                const plannerTitle = 'Bonnaroo <?php echo $selectedYear; ?> Planner (' + plannerType + ')';
+
+                tables.forEach((table, index) => {
+                    if (index > 0) doc.addPage();               // new page between days
+
+                    const day       = table.getAttribute('data-day');
+                    const firstPage = doc.internal.getNumberOfPages();  // page where this day starts
+
+                    doc.autoTable({
+                        html   : table,
+                        startY : 70,                             // leave space for both headers
+                        margin : { top: 70 },
+                        theme  : 'grid',
+                        headStyles: { fillColor: [106, 13, 173], fontStyle: 'bold' },
+                        styles    : { font: 'helvetica', fontSize: 9, halign: 'center', valign: 'middle' },
+
+                        didDrawPage: function () {
+                            const pageInfo = doc.internal.getCurrentPageInfo();
+                            const pageWidth = doc.internal.pageSize.getWidth();
+
+                            /* ----- global planner header (every page) ----- */
+                            doc.setFontSize(14);
+                            doc.setTextColor(0, 0, 0);
+                            doc.text(plannerTitle, pageWidth / 2, 30, { align: 'center' });
+
+                            /* ----- day header or “(Continued)” ----- */
+                            doc.setFontSize(18);
+                            if (pageInfo.pageNumber === firstPage) {
+                                doc.text(day, 40, 50);               // e.g. “Thursday”
+                            } else {
+                                doc.text(day + ' (Continued)', 40, 50);
+                            }
+                        }
+                    });
+                });
+
+                doc.save('Bonnaroo_Planner_<?php echo $selectedYear; ?>_' + plannerType + '.pdf');
+            }
+        </script>
+    </body>
 </html>
