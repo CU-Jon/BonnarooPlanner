@@ -257,6 +257,20 @@ function buildForm($data, $type) {
         } else {
             echo "<div class='container'>";
             echo "<h1>Select Your Bonnaroo {$selectedYear} Events</h1>";
+            // get the last-modified UNIX timestamp
+            $mtimes = [];
+            foreach ([$centerooFile, $outerooFile] as $file) {
+                if (file_exists($file)) {
+                    $mtimes[] = filemtime($file);
+                }
+            }
+            if (!empty($mtimes)) {
+                $last = max($mtimes);
+                // output a <time> tag with a machine-readable datetime
+                echo "<p>Schedules last updated: "
+                . "<time id='last-updated' datetime='" . date('c', $last) . "'>"
+                . "</time></p>";
+            }
             echo "<form method='GET' style='margin-bottom: 20px;'>
                     <label for='year'>Select Year:</label>
                     <select name='year' id='year' onchange='this.form.submit()'>";

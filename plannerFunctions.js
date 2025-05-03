@@ -28,3 +28,12 @@ function toggleSelection(state) {
     if (!activeTab) return;
     activeTab.querySelectorAll("input[type='checkbox']").forEach(cb => cb.checked = state);
 }
+
+//–– Localize the “last-updated” time for each visitor ––
+document.addEventListener('DOMContentLoaded', () => {
+    const el = document.getElementById('last-updated');
+    if (!el) return;
+    const dt = new Date(el.getAttribute('datetime'));
+    // toLocaleString() will format e.g. "5/3/2025, 4:16:52 PM" in your user's locale
+    el.textContent = dt.toLocaleString();
+});
