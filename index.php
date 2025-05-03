@@ -107,6 +107,10 @@ function buildForm($data, $type) {
         echo "<h2>" . htmlspecialchars($day) . "</h2><div class='locations-grid'>";
         foreach ($locations as $location => $events) {
             if (empty($events)) continue;
+            /* 1.  Put them in chronological order */
+            usort($events, fn($a, $b) =>
+                timeToMinutes($a->start) <=> timeToMinutes($b->start)
+            );
             echo "<div class='location-block'><h3>" . htmlspecialchars($location) . "</h3>";
             foreach ($events as $event) {
                 $label = htmlspecialchars("{$event->name} ({$event->start} - {$event->end})");
