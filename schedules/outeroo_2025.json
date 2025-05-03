@@ -24,17 +24,17 @@
         ],
         "House of YES": [
             {
-                "name": "Roolesque",
+                "name": "Roolesque!",
                 "start": "7:00 PM",
                 "end": "8:00 PM"
             },
             {
                 "name": "Wet Nightmare",
-                "start": "7:00 PM",
-                "end": "8:00 PM"
+                "start": "8:00 PM",
+                "end": "9:00 PM"
             },
             {
-                "name": "Waffle House of Yes",
+                "name": "Waffle House of Yes w/ Ultra Violet",
                 "start": "10:00 PM",
                 "end": "2:00 AM"
             }
@@ -53,7 +53,7 @@
                 "end": "3:00 PM"
             },
             {
-                "name": "Soundscape Harmony",
+                "name": "Soundscape Harmony w/ DJ Soularia",
                 "start": "3:00 PM",
                 "end": "4:00 PM"
             },
@@ -107,7 +107,7 @@
                 "end": "9:00 PM"
             },
             {
-                "name": "Haunted House of Yes",
+                "name": "Haunted House of Yes w/ Material Witness",
                 "start": "12:00 AM",
                 "end": "3:00 AM"
             }
@@ -121,7 +121,7 @@
         ],
         "The Rest Stop": [
             {
-                "name": "Mindful Mornings Small World Yoga",
+                "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
                 "end": "10:00 AM"
             },
@@ -134,6 +134,11 @@
                 "name": "Cosmic Oasis Clothing & Book Swap",
                 "start": "1:00 PM",
                 "end": "4:00 PM"
+            },
+            {
+                "name": "Threads of Change: Redefining Sustainability Panel",
+                "start": "12:00 PM",
+                "end": "1:00 PM"
             }
         ],
         "Who Stage": [
@@ -145,7 +150,7 @@
             {
                 "name": "Shannon Lauren Callihan",
                 "start": "12:00 PM",
-                "end": "3:45 PM"
+                "end": "12:45 PM"
             },
             {
                 "name": "Jon Muq",
@@ -153,9 +158,9 @@
                 "end": "2:00 PM"
             },
             {
-                "name": "Crumb Snatchers",
+                "name": "Crumbsnatchers",
                 "start": "2:30 PM",
-                "end": "3:00 PM"
+                "end": "3:15 PM"
             },
             {
                 "name": "Courting",
@@ -173,7 +178,7 @@
                 "end": "7:00 PM"
             },
             {
-                "name": "Vault Boy",
+                "name": "Vaultboy",
                 "start": "7:30 PM",
                 "end": "8:15 PM"
             },
@@ -204,7 +209,7 @@
                 "end": "11:30 AM"
             },
             {
-                "name": "Disc Golf",
+                "name": "Disc Golf w/ Paige Peirce",
                 "start": "12:00 PM",
                 "end": "2:00 PM"
             }
@@ -221,7 +226,7 @@
                 "end": "6:00 PM"
             },
             {
-                "name": "Nursing Home of Yes w/ Material Witness & Ultra Violet",
+                "name": "Nursing Home of Yes w/ Material Witness + Ultra Violet",
                 "start": "1:00 AM",
                 "end": "4:00 AM"
             }
@@ -235,7 +240,7 @@
         ],
         "The Rest Stop": [
             {
-                "name": "Mindful Mornings Small World Yoga",
+                "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
                 "end": "10:00 AM"
             },
@@ -272,7 +277,7 @@
                 "end": "2:00 PM"
             },
             {
-                "name": "SugarDaisy",
+                "name": "Sugadaisy",
                 "start": "2:30 PM",
                 "end": "3:15 PM"
             },
@@ -294,12 +299,12 @@
         ],
         "Where in the Woods": [
             {
-                "name": "Gimme a Reason",
+                "name": "Gimme a Reason New Orleans",
                 "start": "11:00 AM",
                 "end": "3:00 PM"
             },
             {
-                "name": "Jolene Soundroom",
+                "name": "Jolene Soundroom Miami",
                 "start": "1:00 AM",
                 "end": "3:00 AM"
             },
@@ -314,7 +319,7 @@
         "Groop Camp": [],
         "House of YES": [
             {
-                "name": "Holding Space: a Queer Meetup",
+                "name": "Holding Space: A Queer Meet-up",
                 "start": "12:30 PM",
                 "end": "2:00 PM"
             },
@@ -333,7 +338,7 @@
         ],
         "The Rest Stop": [
             {
-                "name": "Mindful Mornings Small World Yoga",
+                "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
                 "end": "10:00 AM"
             },
@@ -392,7 +397,7 @@
         ],
         "Where in the Woods": [
             {
-                "name": "The Low Down",
+                "name": "The Low Down Memphis",
                 "start": "11:00 AM",
                 "end": "4:00 PM"
             },
@@ -407,7 +412,7 @@
         "Groop Camp": [],
         "House of YES": [
             {
-                "name": "Get Yer A$$ Up w/ Ultra Violet",
+                "name": "Get Yer A$$ Up w/ Material Witness + Ultra Violet",
                 "start": "12:00 PM",
                 "end": "2:00 PM"
             },
@@ -420,19 +425,19 @@
         "Frick Frack Casino": [],
         "The Rest Stop": [
             {
-                "name": "Mindful Mornings Small World Yoga",
+                "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
                 "end": "10:00 AM"
             },
             {
-                "name": "Herbal Wellness Workshop",
+                "name": "Herbal Wellness Workshop w/ The Garden Goddess",
                 "start": "10:00 AM",
                 "end": "3:00 PM"
             },
             {
                 "name": "Cosmic Oasis Fashion Show w/ Konane Wildcraft",
-                "start": "12:00 PM",
-                "end": "1:00 PM"
+                "start": "1:00 PM",
+                "end": "2:00 PM"
             },
             {
                 "name": "Giant Puppet Parade",
@@ -447,7 +452,7 @@
                 "end": "11:00 AM"
             },
             {
-                "name": "Raw Honey",
+                "name": "RAWHONEY.",
                 "start": "12:00 PM",
                 "end": "12:45 PM"
             },
@@ -462,7 +467,7 @@
                 "end": "3:15 PM"
             },
             {
-                "name": "Morgan Johnson",
+                "name": "Morgan Johnston",
                 "start": "3:45 PM",
                 "end": "4:30 PM"
             },
@@ -479,7 +484,7 @@
         ],
         "Where in the Woods": [
             {
-                "name": "Floppy Disco Austin",
+                "name": "Floppy Disko Austin",
                 "start": "11:00 AM",
                 "end": "4:00 PM"
             },
