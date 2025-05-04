@@ -162,6 +162,13 @@
                 "start": "1:30 AM",
                 "end": "5:00 AM"
             }
+        ],
+        "How Stage": [
+            {
+                "name": "The What Podcast LIVE",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            }
         ]
     },
     "Friday": {
@@ -397,6 +404,13 @@
                 "name": "Sax & Candy w/ Saxsquatch",
                 "start": "2:00 AM",
                 "end": "3:15 AM"
+            }
+        ],
+        "How Stage": [
+            {
+                "name": "RooHamm Podcast LIVE",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
             }
         ]
     },

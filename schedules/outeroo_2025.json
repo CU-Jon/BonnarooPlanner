@@ -1,4 +1,20 @@
 {
+    "Tuesday": {
+        "The Arch": [
+            {
+                "name": "Troo Roo Toosday",
+                "start": "6:00 PM",
+                "end": "7:00 PM"
+            }
+        ],
+        "Groop Camp": [
+            {
+                "name": "Night Zero Live DJ Set & All-Levels Yoga",
+                "start": "8:00 PM",
+                "end": "10:30 PM"
+            }
+        ]
+    },
     "Wednesday": {
         "Groop Camp": [
             {
