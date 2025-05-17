@@ -55,7 +55,7 @@
                 "end": "2:00 AM"
             }
         ],
-        "Frick Frack Casino": [
+        "Frick Frack Casino (Plaza 9)": [
             {
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
@@ -128,7 +128,7 @@
                 "end": "3:00 AM"
             }
         ],
-        "Frick Frack Casino": [
+        "Frick Frack Casino (Plaza 9)": [
             {
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
@@ -247,7 +247,12 @@
                 "end": "4:00 AM"
             }
         ],
-        "Frick Frack Casino": [
+        "Frick Frack Casino (Plaza 9)": [
+            {
+                "name": "Vinyl Wellness & Beauty",
+                "start": "9:00 AM",
+                "end": "3:00 PM"
+            },
             {
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
@@ -293,7 +298,7 @@
                 "end": "2:00 PM"
             },
             {
-                "name": "Sugadaisy",
+                "name": "Joelton Mayfield",
                 "start": "2:30 PM",
                 "end": "3:15 PM"
             },
@@ -315,17 +320,17 @@
         ],
         "Where in the Woods": [
             {
-                "name": "Gimme a Reason New Orleans",
+                "name": "Gimme a Reason New Orleans: Bouffant Bouffant, Phlegm",
                 "start": "11:00 AM",
                 "end": "3:00 PM"
             },
             {
-                "name": "Jolene Soundroom Miami",
+                "name": "Jolene Soundroom Miami: Sinopoli, True Vine, Wise Guys: Jonny From Space",
                 "start": "1:00 AM",
                 "end": "3:00 AM"
             },
             {
-                "name": "Nasa x Dublab Deep Space",
+                "name": "Nasa Deep Space w/ Dublab Tonalism: Dream Crease, Grandfather., Green House, Photay",
                 "start": "3:00 AM",
                 "end": "6:00 AM"
             }
@@ -345,7 +350,7 @@
                 "end": "6:00 PM"
             }
         ],
-        "Frick Frack Casino": [
+        "Frick Frack Casino (Plaza 9)": [
             {
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
@@ -438,7 +443,7 @@
                 "end": "6:00 PM"
             }
         ],
-        "Frick Frack Casino": [],
+        "Frick Frack Casino (Plaza 9)": [],
         "The Rest Stop": [
             {
                 "name": "Mindful Mornings + Small World Yoga",
