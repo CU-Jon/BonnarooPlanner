@@ -23,11 +23,11 @@ $outeroo = json_decode(file_get_contents($outerooFile));
 
 function timeToMinutes($time) {
     // Convert "h:mm AM/PM" to minutes since 00:00,
-    // but treat 12 AM – 6:00 AM as the “next day” so
+    // but treat 12 AM – 7:00 AM as the “next day” so
     // they render after the day’s main events.
 
     // Change the cutoff here if Bonnaroo ever shifts its schedule
-    $LATE_NIGHT_CUTOFF = 6 * 60;    // 06:00 AM  ➜  360 minutes
+    $LATE_NIGHT_CUTOFF = 7 * 60;    // 07:00 AM  ➜  420 minutes
 
     // Parse a “h:mm AM/PM” string into minutes since 00:00
     $parts   = date_parse_from_format('g:i A', $time);

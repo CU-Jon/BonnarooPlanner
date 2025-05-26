@@ -7,7 +7,7 @@
                 "end": "7:00 PM"
             }
         ],
-        "Groop Camp": [
+        "Groop Camp (Plaza 5)": [
             {
                 "name": "Night Zero Live DJ Set & All-Levels Yoga",
                 "start": "8:00 PM",
@@ -16,7 +16,7 @@
         ]
     },
     "Wednesday": {
-        "Groop Camp": [
+        "Groop Camp (Plaza 5)": [
             {
                 "name": "Camp Clear Piss Hydration Meetup",
                 "start": "12:00 PM",
@@ -36,9 +36,19 @@
                 "name": "Roo Bus Pre Party",
                 "start": "4:00 PM",
                 "end": "1:00 AM"
+            },
+            {
+                "name": "Narcan Training w/ This Must Be The Place",
+                "start": "2:00 PM",
+                "end": "2:30 PM"
+            },
+            {
+                "name": "Debussy Bus",
+                "start": "1:00 AM",
+                "end": "3:00 AM"
             }
         ],
-        "House of YES": [
+        "House of YES (Plaza 3)": [
             {
                 "name": "Roolesque!",
                 "start": "7:00 PM",
@@ -50,7 +60,7 @@
                 "end": "9:00 PM"
             },
             {
-                "name": "Waffle House of Yes w/ Ultra Violet",
+                "name": "Waffle House of YES w/ Ultra Violet",
                 "start": "10:00 PM",
                 "end": "2:00 AM"
             }
@@ -60,9 +70,14 @@
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
                 "end": "5:00 AM"
+            },
+            {
+                "name": "Vinyl Wellness & Beauty",
+                "start": "12:00 PM",
+                "end": "5:00 PM"
             }
         ],
-        "The Rest Stop": [
+        "The Rest Stop (Plaza 2)": [
             {
                 "name": "Journal Making with the Bottom Crew",
                 "start": "12:00 PM",
@@ -77,16 +92,21 @@
                 "name": "Small World Yoga",
                 "start": "7:00 PM",
                 "end": "8:00 PM"
-            }
-        ],
-        "Who Stage": [
+            },
             {
-                "name": "Yomi That Harpist",
-                "start": "7:00 AM",
-                "end": "8:00 AM"
+                "name": "Narcan Training w/ This Must Be The Place",
+                "start": "5:00 PM",
+                "end": "5:30 PM"
             }
         ],
-        "Where in the Woods": [
+        "Who Stage (Plaza 7)": [
+            {
+                "name": "Yomí That Harpist",
+                "start": "7:00 PM",
+                "end": "8:00 PM"
+            }
+        ],
+        "Where in the Woods (Plaza 1)": [
             {
                 "name": "Carousel Nashville",
                 "start": "8:00 PM",
@@ -100,8 +120,8 @@
         ]
     },
     "Thursday": {
-        "Groop Camp": [],
-        "House of YES": [
+        "Groop Camp (Plaza 5)": [],
+        "House of YES (Plaza 3)": [
             {
                 "name": "Get Yer A$$ Up w/ Material Witness",
                 "start": "12:00 PM",
@@ -123,7 +143,7 @@
                 "end": "9:00 PM"
             },
             {
-                "name": "Haunted House of Yes w/ Material Witness",
+                "name": "Haunted House of YES w/ Material Witness",
                 "start": "12:00 AM",
                 "end": "3:00 AM"
             }
@@ -133,9 +153,14 @@
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
                 "end": "5:00 AM"
+            },
+            {
+                "name": "Vinyl Wellness & Beauty",
+                "start": "9:00 AM",
+                "end": "3:00 PM"
             }
         ],
-        "The Rest Stop": [
+        "The Rest Stop (Plaza 2)": [
             {
                 "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
@@ -157,9 +182,9 @@
                 "end": "1:00 PM"
             }
         ],
-        "Who Stage": [
+        "Who Stage (Plaza 7)": [
             {
-                "name": "Yomi That Harpist",
+                "name": "Yomí That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -204,21 +229,21 @@
                 "end": "9:30 PM"
             }
         ],
-        "Where in the Woods": [
+        "Where in the Woods (Plaza 1)": [
             {
                 "name": "Unruly Atlanta",
                 "start": "1:00 AM",
                 "end": "3:00 AM"
             },
             {
-                "name": "Nasa x Dublab Deep Space",
+                "name": "Nasa Deep Space w/ Dublab Tonalism: Dream Crease, Grandfather., Green House, Photay",
                 "start": "3:00 AM",
                 "end": "6:00 AM"
             }
         ]
     },
     "Friday": {
-        "Groop Camp": [
+        "Groop Camp (Plaza 5)": [
             {
                 "name": "Camp Reddaroo Craft Beer Exchange",
                 "start": "10:30 AM",
@@ -230,7 +255,7 @@
                 "end": "2:00 PM"
             }
         ],
-        "House of YES": [
+        "House of YES (Plaza 3)": [
             {
                 "name": "Get Yer A$$ Up w/ Ultra Violet",
                 "start": "12:00 PM",
@@ -259,7 +284,7 @@
                 "end": "5:00 AM"
             }
         ],
-        "The Rest Stop": [
+        "The Rest Stop (Plaza 2)": [
             {
                 "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
@@ -281,9 +306,9 @@
                 "end": "4:00 PM"
             }
         ],
-        "Who Stage": [
+        "Who Stage (Plaza 7)": [
             {
-                "name": "Yomi That Harpist",
+                "name": "Yomí That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -318,7 +343,7 @@
                 "end": "7:00 PM"
             }
         ],
-        "Where in the Woods": [
+        "Where in the Woods (Plaza 1)": [
             {
                 "name": "Gimme a Reason New Orleans: Bouffant Bouffant, Phlegm",
                 "start": "11:00 AM",
@@ -332,13 +357,13 @@
             {
                 "name": "Nasa Deep Space w/ Dublab Tonalism: Dream Crease, Grandfather., Green House, Photay",
                 "start": "4:00 AM",
-                "end": "6:00 AM"
+                "end": "7:00 AM"
             }
         ]
     },
     "Saturday": {
-        "Groop Camp": [],
-        "House of YES": [
+        "Groop Camp (Plaza 5)": [],
+        "House of YES (Plaza 3)": [
             {
                 "name": "Holding Space: A Queer Meet-up",
                 "start": "12:30 PM",
@@ -355,9 +380,14 @@
                 "name": "Frick Frack Black Jack",
                 "start": "12:00 AM",
                 "end": "5:00 AM"
+            },
+            {
+                "name": "Vinyl Wellness & Beauty",
+                "start": "9:00 AM",
+                "end": "3:00 PM"
             }
         ],
-        "The Rest Stop": [
+        "The Rest Stop (Plaza 2)": [
             {
                 "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
@@ -379,9 +409,9 @@
                 "end": "3:00 PM"
             }
         ],
-        "Who Stage": [
+        "Who Stage (Plaza 7)": [
             {
-                "name": "Yomi That Harpist",
+                "name": "Yomí That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -416,7 +446,7 @@
                 "end": "7:00 PM"
             }
         ],
-        "Where in the Woods": [
+        "Where in the Woods (Plaza 1)": [
             {
                 "name": "The Low Down Memphis",
                 "start": "11:00 AM",
@@ -430,8 +460,8 @@
         ]
     },
     "Sunday": {
-        "Groop Camp": [],
-        "House of YES": [
+        "Groop Camp (Plaza 5)": [],
+        "House of YES (Plaza 3)": [
             {
                 "name": "Get Yer A$$ Up w/ Material Witness + Ultra Violet",
                 "start": "12:00 PM",
@@ -443,8 +473,14 @@
                 "end": "6:00 PM"
             }
         ],
-        "Frick Frack Casino (Plaza 9)": [],
-        "The Rest Stop": [
+        "Frick Frack Casino (Plaza 9)": [
+            {
+                "name": "Vinyl Wellness & Beauty",
+                "start": "9:00 AM",
+                "end": "3:00 PM"
+            }
+        ],
+        "The Rest Stop (Plaza 2)": [
             {
                 "name": "Mindful Mornings + Small World Yoga",
                 "start": "9:00 AM",
@@ -466,14 +502,14 @@
                 "end": "3:00 PM"
             }
         ],
-        "Who Stage": [
+        "Who Stage (Plaza 7)": [
             {
-                "name": "Yomi That Harpist",
+                "name": "Yomí That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
             {
-                "name": "RAWHONEY.",
+                "name": "Belmont",
                 "start": "12:00 PM",
                 "end": "12:45 PM"
             },
@@ -503,14 +539,14 @@
                 "end": "7:00 PM"
             }
         ],
-        "Where in the Woods": [
+        "Where in the Woods (Plaza 1)": [
             {
                 "name": "Floppy Disko Austin",
                 "start": "11:00 AM",
                 "end": "4:00 PM"
             },
             {
-                "name": "Taylor Hanson",
+                "name": "DJ Taylor Hanson",
                 "start": "5:00 PM",
                 "end": "6:00 PM"
             }

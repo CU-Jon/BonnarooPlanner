@@ -132,13 +132,13 @@
             },
             {
                 "name": "2Hollis",
-                "start": "10:30 PM",
-                "end": "11:30 PM"
+                "start": "10:00 PM",
+                "end": "11:00 PM"
             },
             {
                 "name": "Joey Valence & Brae",
-                "start": "12:15 AM",
-                "end": "1:15 AM"
+                "start": "12:00 AM",
+                "end": "1:00 AM"
             }
         ],
         "Snake & Jake's": [
@@ -158,16 +158,78 @@
                 "end": "5:00 PM"
             },
             {
-                "name": "Uknowhat-Hellyeah w/ Rusty Lazer",
+                "name": "UKNOWHATHELLYEAH w/ Rusty Lazer",
                 "start": "1:30 AM",
                 "end": "5:00 AM"
             }
         ],
         "How Stage": [
             {
-                "name": "The What Podcast LIVE",
+                "name": "Podcast Party with a Purpose Featuring The What Podcast",
                 "start": "4:00 PM",
                 "end": "5:30 PM"
+            },
+            {
+                "name": "Pitch Meeting Kickoff",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "2:00 PM",
+                "end": "2:25 PM"
+            },
+            {
+                "name": "Festivals in the Age of Climate Crisis: Innovation for Sustainability",
+                "start": "2:30 PM",
+                "end": "3:15 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "3:30 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "What's The Farm without Bonnaroo?: Manchester's Perspectives on Bonnaroo's Impact",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            },
+            {
+                "name": "BonnaROOTS Dinner Performance",
+                "start": "6:00 PM",
+                "end": "7:30 PM"
+            }
+        ],
+        "The Academy at Planet Roo": [
+            {
+                "name": "Bonnaroo 101 with the Garden Croo & TOTEM Foundation",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "Lost & Found: Create Totems with TOTEM Foundation",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Breath Break Beats Burnout: Breathwork with The Art of Living",
+                "start": "2:00 PM",
+                "end": "2:45 PM"
+            },
+            {
+                "name": "Gardening 101 with the Garden Croo",
+                "start": "3:00 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Are the Kids Alright? Supporting LGBTQ+ Youth",
+                "start": "4:00 PM",
+                "end": "4:45 PM"
+            },
+            {
+                "name": "Daily ROOjuvination: Meditation w/ The Art of Living",
+                "start": "5:00 PM",
+                "end": "5:45 PM"
             }
         ]
     },
@@ -366,7 +428,7 @@
             {
                 "name": "Damiano David",
                 "start": "7:30 PM",
-                "end": "8:30 PM"
+                "end": "8:15 PM"
             },
             {
                 "name": "Rainbow Kitten Surprise",
@@ -408,9 +470,86 @@
         ],
         "How Stage": [
             {
-                "name": "RooHamm Podcast LIVE",
+                "name": "Rise & Vibe with Small World Yoga",
+                "start": "10:00 AM",
+                "end": "10:45 AM"
+            },
+            {
+                "name": "Global Grooves Dance w/ The Global Education Center - Latin Fusion",
+                "start": "11:00 AM",
+                "end": "11:45 AM"
+            },
+            {
+                "name": "Nonprofits vs. Politics: Staying Nimble in Changing Administrations",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "5th Woman on Stage",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "2:00 PM",
+                "end": "2:25 PM"
+            },
+            {
+                "name": "Allyship in Divided Times: Strengthening Diversity, Equity, Inclusion & Justice in a Changing World",
+                "start": "2:30 PM",
+                "end": "3:15 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "3:30 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Podcast Party with a Purpose Featuring RooHamm Podcast",
                 "start": "4:00 PM",
                 "end": "5:30 PM"
+            },
+            {
+                "name": "Techno-Roo: AI, 360 Stages, and The Future of Live Music",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            },
+            {
+                "name": "BonnaROOTS Dinner Performance",
+                "start": "6:00 PM",
+                "end": "7:30 PM"
+            }
+        ],
+        "The Academy at Planet Roo": [
+            {
+                "name": "House Plants w/ The Garden Croo",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "Creating Safer Music Communities w/ Calling All Crows",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Mind Spa: Full Service Reset: Breathwork & Meditation w/ The Art of Living",
+                "start": "2:00 PM",
+                "end": "2:45 PM"
+            },
+            {
+                "name": "How to Write a Letter to Your Member of Congress w/ The ONE Campaign",
+                "start": "3:00 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Subtractive Soap Sculpture w/ Arts Inside",
+                "start": "4:00 PM",
+                "end": "4:45 PM"
+            },
+            {
+                "name": "Daily ROOjuvination: Meditation w/ The Art of Living",
+                "start": "5:00 PM",
+                "end": "5:45 PM"
             }
         ]
     },
@@ -445,7 +584,7 @@
         "Which Stage": [
             {
                 "name": "Thee Sinseers and the Altons",
-                "start": "2:15 PM",
+                "start": "2:00 PM",
                 "end": "3:00 PM"
             },
             {
@@ -643,6 +782,90 @@
                 "start": "1:30 AM",
                 "end": "5:00 AM"
             }
+        ],
+        "How Stage": [
+            {
+                "name": "Rise & Vibe with Small World Yoga",
+                "start": "10:00 AM",
+                "end": "10:45 AM"
+            },
+            {
+                "name": "Global Grooves Dance w/ The Global Education Center - Zumba",
+                "start": "11:00 AM",
+                "end": "11:45 AM"
+            },
+            {
+                "name": "Storytime w/ the 5th Woman",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "The Business of Being Good: Consumer Consciousness & Ethical Shopping",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "2:00 PM",
+                "end": "2:25 PM"
+            },
+            {
+                "name": "Power in the Polls: Uniting for a Productive Future",
+                "start": "2:30 PM",
+                "end": "3:15 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "3:30 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Podcast Party with a Purpose Featuring Storytime w/ The Roo Bus",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            },
+            {
+                "name": "Festival Culture & Traditions: Radiate Positivity At-Home & Abroad",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            },
+            {
+                "name": "BonnaROOTS Dinner Performance",
+                "start": "6:00 PM",
+                "end": "7:30 PM"
+            }
+        ],
+        "The Academy at Planet Roo": [
+            {
+                "name": "Beekeeping & Pollinators w/ the Garden Croo",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "Mushroom Log Cultivation w/ the Garden Croo",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Breath Break Beats Burnout: Breathwork with The Art of Living",
+                "start": "2:00 PM",
+                "end": "2:45 PM"
+            },
+            {
+                "name": "Natural Dreamcatchers w/ Arts Inside",
+                "start": "3:00 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Everyone Deserves a Home: Upcycled Birdhouses w/ Habitat for Humanity",
+                "start": "4:00 PM",
+                "end": "4:45 PM"
+            },
+            {
+                "name": "Daily ROOjuvination: Meditation w/ The Art of Living",
+                "start": "5:00 PM",
+                "end": "5:45 PM"
+            }
         ]
     },
     "Sunday": {
@@ -828,6 +1051,85 @@
                 "name": "Speed Dating w/ Nectar",
                 "start": "3:00 PM",
                 "end": "5:00 PM"
+            }
+        ],
+        "How Stage": [
+            {
+                "name": "Rise & Vibe with Small World Yoga",
+                "start": "10:00 AM",
+                "end": "10:45 AM"
+            },
+            {
+                "name": "Global Grooves Dance w/ The Global Education Center - Belly-Dancing",
+                "start": "11:00 AM",
+                "end": "11:45 AM"
+            },
+            {
+                "name": "Healing Through Art: Creative Responses to Stress, Anxiety, and Trauma",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "Let's Talk About Sex: Consent, Rights, & Responsibilities within Intimacy",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "2:00 PM",
+                "end": "2:25 PM"
+            },
+            {
+                "name": "Music Beyond Borders: How Has Art Built Peace Across the World",
+                "start": "2:30 PM",
+                "end": "3:15 PM"
+            },
+            {
+                "name": "Roo Works Caf\u00e9 Acoustic",
+                "start": "3:30 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Pitch Meeting Finale",
+                "start": "4:00 PM",
+                "end": "5:30 PM"
+            },
+            {
+                "name": "PLANET ROO PARTY! Kitchen Karaoke For a Cause & Fashion Swap",
+                "start": "6:00 PM",
+                "end": "7:30 PM"
+            }
+        ],
+        "The Academy at Planet Roo": [
+            {
+                "name": "Hunger Banquet w/ Oxfam America",
+                "start": "12:00 PM",
+                "end": "12:45 PM"
+            },
+            {
+                "name": "Upcycled Bag Weaving w/ Arts Inside",
+                "start": "1:00 PM",
+                "end": "1:45 PM"
+            },
+            {
+                "name": "Mind Spa: Full Service Reset: Breathwork & Meditation w/ The Art of Living",
+                "start": "2:00 PM",
+                "end": "2:45 PM"
+            },
+            {
+                "name": "Terrarium Building w/ the Garden Croo",
+                "start": "3:00 PM",
+                "end": "3:45 PM"
+            },
+            {
+                "name": "Flower Crowns w/ Turnip Green Creative Reuse",
+                "start": "4:00 PM",
+                "end": "4:45 PM"
+            },
+            {
+                "name": "Daily ROOjuvination: Meditation w/ The Art of Living",
+                "start": "5:00 PM",
+                "end": "5:45 PM"
             }
         ]
     }
