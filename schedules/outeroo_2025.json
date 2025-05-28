@@ -101,7 +101,7 @@
         ],
         "Who Stage (Plaza 7)": [
             {
-                "name": "Yomí That Harpist",
+                "name": "Yom\u00ed That Harpist",
                 "start": "7:00 PM",
                 "end": "8:00 PM"
             }
@@ -184,7 +184,7 @@
         ],
         "Who Stage (Plaza 7)": [
             {
-                "name": "Yomí That Harpist",
+                "name": "Yom\u00ed That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -308,7 +308,7 @@
         ],
         "Who Stage (Plaza 7)": [
             {
-                "name": "Yomí That Harpist",
+                "name": "Yom\u00ed That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -411,7 +411,7 @@
         ],
         "Who Stage (Plaza 7)": [
             {
-                "name": "Yomí That Harpist",
+                "name": "Yom\u00ed That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
@@ -499,17 +499,17 @@
             {
                 "name": "Giant Puppet Parade",
                 "start": "2:00 PM",
-                "end": "3:00 PM"
+                "end": "3:30 PM"
             }
         ],
         "Who Stage (Plaza 7)": [
             {
-                "name": "Yomí That Harpist",
+                "name": "Yom\u00ed That Harpist",
                 "start": "10:00 AM",
                 "end": "11:00 AM"
             },
             {
-                "name": "Belmont",
+                "name": "RAWHONEY.",
                 "start": "12:00 PM",
                 "end": "12:45 PM"
             },
