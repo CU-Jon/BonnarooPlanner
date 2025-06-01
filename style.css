@@ -95,7 +95,7 @@ select#year:hover {
     white-space: nowrap;
     overflow: hidden;
 }
-button[type='submit'], button#printButton, button#pdfButton, a#startOver, button[type='button'] {
+button[type='submit'], button#printButton, button#pdfButton, a#startOver, button#icsButton, button[type='button'] {
     background-color: #6A0DAD;
     color: white;
     font-family: 'Concert One', cursive;
@@ -122,8 +122,13 @@ button:hover, a#startOver:hover {
     max-width: 6em;
     justify-self: center;
 }
+#icsButton {
+    display: block;
+    max-width: 15em;
+    justify-self: center;
+}
 @media print {
-    #printButton, #pdfButton, #startOver {
+    #printButton, #pdfButton, #startOver, #icsButton {
         display: none;
     }
     body {
